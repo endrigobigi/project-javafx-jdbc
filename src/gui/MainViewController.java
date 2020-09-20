@@ -64,6 +64,7 @@ public class MainViewController implements Initializable{
 			mainVBox.getChildren().add(mainMenu);
 			mainVBox.getChildren().addAll(newVBox.getChildren());
 			
+			//Método genérico para inicialização de função a ser definida localmente
 			T controller = loader.getController();
 			initializingAction.accept(controller);
 		}
