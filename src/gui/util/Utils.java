@@ -22,7 +22,15 @@ public class Utils {
 
 	public static Integer tryParseToInt(String str) {
 		try {
-			return Integer.parseInt(str);// caso valor inválido degitado, retornar nulo
+			return Integer.parseInt(str);// caso valor inválido digitado, retornar nulo
+		} catch (NumberFormatException e) {
+			return null;
+		}
+	}
+	
+	public static Double tryParseToDouble(String str) {
+		try {
+			return Double.parseDouble(str);// caso valor inválido digitado, retornar nulo
 		} catch (NumberFormatException e) {
 			return null;
 		}
